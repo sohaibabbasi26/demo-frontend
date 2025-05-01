@@ -12,7 +12,6 @@ export async function POST(req: NextRequest) {
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
             body: JSON.stringify(body),
-            duplex: 'half' 
         });
     
         console.log("[NEXT API RESPONSE]:", response);
