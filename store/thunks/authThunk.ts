@@ -21,7 +21,7 @@ interface LoginData {
 
 export const authBaseSlice = createApi({
   reducerPath: "authBaseApi", 
-  baseQuery: fetchBaseQuery({ baseUrl: apiUrl, credentials: "include" }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_BASE_URL, credentials: "include" }),
   endpoints: (builder) => ({
     login: builder.mutation<ApiResponse, LoginData>({
       query: (credentials) => ({

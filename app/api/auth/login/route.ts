@@ -2,12 +2,12 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-export async function POST(req: NextRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest) {
     try{
 
         const body = await req?.json();
         console.log("[body]:",req?.body);
-        const response = await fetch('http://192.168.100.64:4000/admin/log-in', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/admin/log-in`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
