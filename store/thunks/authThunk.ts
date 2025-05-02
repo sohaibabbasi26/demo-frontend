@@ -7,7 +7,7 @@ interface ApiResponse {
   token: string;
   message: string;
   user: {
-    id: number;
+    id: number; 
     username: string;
   };
 }

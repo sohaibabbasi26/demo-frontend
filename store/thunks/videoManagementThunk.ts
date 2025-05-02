@@ -23,7 +23,7 @@ interface ApiResponse {
 const getToken = () => localStorage.getItem("accessToken");
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
+  baseUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/admin`,
   credentials: "include"
 });
 

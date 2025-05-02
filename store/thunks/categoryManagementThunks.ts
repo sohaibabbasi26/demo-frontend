@@ -26,16 +26,12 @@ interface ApiResponse {
 
 const getToken = () => localStorage.getItem("accessToken");
 const baseQuery = fetchBaseQuery({
-  baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
+  baseUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/admin`,
   credentials: "include"
 });
 
 
 const baseQueryWithLogout = async (args: any, api: any, extraOptions: any) => {
-
-  // const allCookies = Cookies.get("accessToken");
-
-  // console.log("[COOKIES IN BASE QUERY WITH LOGOUT]:",allCookies);
 
   const result = await baseQuery(args, api, extraOptions);
 

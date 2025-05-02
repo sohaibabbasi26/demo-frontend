@@ -25,7 +25,7 @@ interface ApiResponse {
 
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
+  baseUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/admin`,
   credentials: "include"
 });
 
