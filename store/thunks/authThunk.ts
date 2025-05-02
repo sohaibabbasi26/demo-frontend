@@ -25,7 +25,7 @@ export const authBaseSlice = createApi({
   endpoints: (builder) => ({
     login: builder.mutation<ApiResponse, LoginData>({
       query: (credentials) => ({
-        url: "/admin/login", // Calls /api/auth/login (Next.js API)
+        url: "/admin/log-in", // Calls /api/auth/login (Next.js API)
         method: "POST",
         body: credentials,
       }),
