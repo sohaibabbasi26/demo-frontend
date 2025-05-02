@@ -21,11 +21,11 @@ interface LoginData {
 
 export const authBaseSlice = createApi({
   reducerPath: "authBaseApi", 
-  baseQuery: fetchBaseQuery({ baseUrl: apiUrl, credentials: "include" }),
+  baseQuery: fetchBaseQuery({ baseUrl:  `${process.env.NEXT_PUBLIC_BASE_URL}`, credentials: "include" }),
   endpoints: (builder) => ({
     login: builder.mutation<ApiResponse, LoginData>({
       query: (credentials) => ({
-        url: "/api/auth/login", // Calls /api/auth/login (Next.js API)
+        url: "/admin/login", // Calls /api/auth/login (Next.js API)
         method: "POST",
         body: credentials,
       }),
