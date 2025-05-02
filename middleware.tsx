@@ -16,10 +16,10 @@ export function middleware(request: NextRequest) {
 
 
 
-  if (isProtectedRoute && !token) {
-    const loginUrl = new URL("/login", request.url);
-    return NextResponse.redirect(loginUrl);
-  }
+  // if (isProtectedRoute && !token) {
+  //   const loginUrl = new URL("/login", request.url);
+  //   return NextResponse.redirect(loginUrl);
+  // }
 
   return NextResponse.next();
 }
