@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const apiUrl = `http://localhost:3000/`;
+const apiUrl = `https://demo-frontend-kmdj.vercel.app`;
 
 interface ApiResponse {
   status: number;
@@ -21,7 +21,7 @@ interface LoginData {
 
 export const authBaseSlice = createApi({
   reducerPath: "authBaseApi", 
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_BASE_URL, credentials: "include" }),
+  baseQuery: fetchBaseQuery({ baseUrl: apiUrl, credentials: "include" }),
   endpoints: (builder) => ({
     login: builder.mutation<ApiResponse, LoginData>({
       query: (credentials) => ({

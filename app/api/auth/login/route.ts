@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
         console.log("[NEXT API RESPONSE]:", response);
     
         const data = await response.json();
-        const cookiesResponse = response.headers.getSetCookie(); 
+        const cookiesResponse = response.headers.getSetCookie();    
         console.log("[cookies]:", cookiesResponse);
 
         const nextResponse = NextResponse.json(data, { status: response.status });
